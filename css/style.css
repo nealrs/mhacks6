@@ -11,6 +11,7 @@ h1 {
 table {
   border-spacing: 0; width: 100%;
   background-color: #FFF;
+  border-collapse: collapse;
 }
 
 tbody tr:nth-child(odd) {
@@ -72,7 +73,7 @@ img {width: 100%;}
 hr {border: 2px solid #CCF4FF;}
 
 p a, a {
-  color: #535353;
+  color: #062946;
   text-decoration: none;
   padding-bottom: 0px;
   /*border-bottom: 2px #CCF4FF solid;*/
@@ -167,26 +168,35 @@ input {
 
 @media print {
   body {
-    color:#111111 !important;
+    color: black !important;
+    background: #FFF;
   }
 
   a {
-    color: #111111;
+    color: black !important;
   }
 
   #header, #footer {
     background-color:#fff;
-    color:#111111;
+    color: black;
   }
   .search_container{
     background-color:#fff;
   }
 
-  table {
-    page-break-inside: avoid;
+  th.cat,
+  td.cat {
+    display:none;
   }
+
   tr {
     page-break-inside:avoid;
-    page-break-after:auto
+    page-break-after:auto;
+  }
+
+  tbody tr{
+    background-color: #fff !important;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
   }
 }
