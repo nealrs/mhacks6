@@ -22,32 +22,42 @@
   </div>
 
   <script id="template" type="x-tmpl-mustache">
-    <center>
-      <input class="search" type="search" placeholder="Filter by sponsor prize or project name or whatever" id="filter"/>
-    </center>
+    <div class="search_container">
+      <input class="search" type="search" placeholder="Filter by sponsor prize, project name, category or whatever" id="filter"/>
+    </div>
     <table id="expoTable">
       <thead>
         <tr>
-          <!--<th class="number">Expo</th>-->
           <th class="number">Table</th>
           <th class="name">Project</th>
           <th class="prize">Sponsor Prizes</th>
+          <th class="cat">Category</th>
         </tr>
       </thead>
       <tbody class="list">
         {{#data}}
           <tr>
-            <!--<td class="number">{{expo}}</td>-->
             <td class="number">E{{expo}} T{{table}}</td>
             <td class="name"><a href="{{{link}}}" target="_blank">{{project}}</a></td>
             <td class="prize">{{sponsors}}</td>
+            <td class="cat">{{category}}</td>
           </tr>
         {{/data}}
       </tbody>
     </table>
   </script>
   <br>
-  <a href="http://devpost.com"><img src="http://devpost0.assetspost.com/assets/shared/devpost_logo-646bdf6ac6663230947a952f8d354cad.svg" style="height: 30px;"></a>
+  <div id="footer">
+
+    &hellip;
+
+    <p>Sponsors, want analytics about who's using your API, what they're building, and where?</p>
+    <p>Organizers, want your own slick expo / table number app?</p>
+    <p>Email <a href="mailto:hackathons@devpost.com"> hackathons@devpost.com</a></p>
+
+    <a href="http://devpost.com"><img src="http://devpost0.assetspost.com/assets/shared/devpost_logo-646bdf6ac6663230947a952f8d354cad.svg" style="height: 30px;"></a>
+
+  </div>
 
   <script type="text/javascript">
 

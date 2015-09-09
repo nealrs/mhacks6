@@ -1,7 +1,12 @@
 .container {max-width: 800px; margin: 0 auto; overflow: auto;}
 
 h3 {padding-top: 18px;}
-h1 {font-size: 36px;}
+h1 {
+  font-size: 36px;
+  padding-top: .5rem;
+  margin-top:0px;
+  margin-bottom:0px;
+}
 
 table {
   border-spacing: 0; width: 100%;
@@ -31,9 +36,13 @@ td.name {
 
 th.prize,
 td.prize {
-  width: 50%;
+  width: 40%;
 }
 
+th.cat,
+td.cat {
+  width: 10%;
+}
 
 
 td a {line-height: 24px;}
@@ -92,6 +101,9 @@ input {
   padding: 8px;
   font-family: sans-serif;
 }
+.search_container{
+  text-align:center;
+}
 
 #header {
   width:800px;
@@ -99,8 +111,13 @@ input {
   color:#062946;
   z-index:999999;
   text-align:center;
-  /*box-shadow: 0px 9px 11px -8px rgba(0,0,0,0.5);
-  border-bottom: 1px solid #ddd;*/
+}
+
+#footer{
+  background-color: #efefef;
+  color: #062946;
+  text-align: center;
+  padding-bottom: 1rem;
 }
 
 #hackathon {
@@ -125,15 +142,51 @@ input {
 
   th.name,
   td.name {
-    width: 40%;
+    width: 30%;
   }
 
   th.prize,
   td.prize {
-    width: 40%;
+    width: 50%;
+  }
+
+  th.cat,
+  td.cat {
+    display:none;
   }
 
   #hackathon {
     margin: 30px 0 10px 8px;
+  }
+
+  #footer p{
+    text-align:left;
+    padding:0 10px;
+  }
+}
+
+@media print {
+  body {
+    color:#111111 !important;
+  }
+
+  a {
+    color: #111111;
+  }
+
+  #header, #footer {
+    background-color:#fff;
+    color:#111111;
+  }
+  .search_container{
+    background-color:#fff;
+  }
+
+  table {
+    page-break-inside: avoid;
+  }
+  tr {
+    page-break-inside:avoid;
+    page-break-after:auto
   }
 }
