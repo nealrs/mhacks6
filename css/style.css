@@ -189,6 +189,19 @@ input {
     display:none;
   }
 
+  tr,
+  th,
+  td {
+    padding: 0px !important;
+    line-height: 11px !important;
+    font-size: 11px;
+  }
+
+  td a,
+  p {
+    line-height: 11px !important;
+  }
+
   tr {
     page-break-inside:avoid;
     page-break-after:auto;
